@@ -263,36 +263,7 @@ function ShareAnything({
 }: {
   handleShare: (text: string) => void;
 }) {
-  const [text, setText] = useState('');
-  return (
-    <div className="mt-4">
-      <label
-        htmlFor="comment"
-        className="block text-sm font-medium text-gray-700"
-      >
-        随意要分享的内容.
-      </label>
-      <div className="mt-1">
-        <textarea
-          rows={4}
-          name="comment"
-          id="comment"
-          className="block w-full border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-      </div>
-      <div className="flex justify-end mt-2">
-        <button
-          onClick={() => handleShare(text)}
-          type="submit"
-          className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-transparent rounded-md shadow-sm hover:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-        >
-          分享
-        </button>
-      </div>
-    </div>
-  );
+
 }
 
 function ShareActions({
@@ -338,23 +309,7 @@ function ShareActions({
     }#${url.hostname}`;
   }
   return (
-    <span className="inline-flex self-center mt-4 rounded-md shadow-sm isolate">
-      <button
-        onClick={() => handleShare(getVlessURL())}
-        type="button"
-        className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-      >
-        分享 V2ray
-      </button>
-
-      <button
-        onClick={() => handleShare(getPageURL())}
-        type="button"
-        className="relative inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-l-md hover:border-indigo-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-      >
-        分享本页
-      </button>
-    </span>
+  
   );
 }
 
@@ -369,9 +324,9 @@ function Warning() {
           />
         </div>
         <div className="ml-3">
-          <h3 className="text-sm font-medium text-red-700">注意！！</h3>
+          <h3 className="text-sm font-medium text-red-700">اهشدار</h3>
           <div className="mt-2 text-sm text-red-700">
-            <p>泄露本页面就等于泄露你的设置。</p>
+            <p>این صفحه محرمانه است</p>
           </div>
         </div>
       </div>
